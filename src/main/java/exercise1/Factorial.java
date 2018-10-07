@@ -12,10 +12,10 @@ public class Factorial {
 
     private static void calculateFactorial() {
         int i, fact = 1;
-        System.out.println("Wprowadź dowolną liczbę naturalną (>=0)");
+        System.out.println("Insert a natural number (>=0)");
         int n = new Scanner(System.in).nextInt();
         if (n < 0) {
-            System.out.println("Zła liczba.");
+            System.out.println("Incorrect number.");
         } else {
             for (i = 2; i <= n; i++) {
                 fact = fact * i;
