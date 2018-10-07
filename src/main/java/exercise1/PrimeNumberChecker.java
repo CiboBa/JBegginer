@@ -16,7 +16,6 @@ public class PrimeNumberChecker {
         System.out.println(((double) (endTime - startTime)) / 1_000);*/
         long startTime1 = System.currentTimeMillis();
         printEratostenesPrimes(n);
-
         long endTime1 = System.currentTimeMillis();
         System.out.println(((double) (endTime1 - startTime1)) / 1_000);
     }
