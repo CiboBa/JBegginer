@@ -1,9 +1,9 @@
-package exercise2;
+package exercises;
 
 import java.util.Scanner;
 import java.util.stream.IntStream;
 
-public class Task1 {
+public class PrintSequences {
 
     public static void main(String[] args) {
 
