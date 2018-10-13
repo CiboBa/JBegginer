@@ -26,19 +26,18 @@ public class Task1 {
             }
             System.out.print(result + " ");
         }
-        printLines(newLine());
+        printLines(newLine);
         int multiplier = 1;
         System.out.print("2 ");
         for (int i = 1, result = 4; i < n; i++, result += 2 * multiplier) {
             if (i % 3 == 0) multiplier *= -1;
             System.out.print(result + " ");
         }
-        printLines(newLine());
+        printLines(newLine);
     }
 
-    private static String newLine() {
-        return "\n------------";
-    }
+    private static String newLine= "\n------------";
+
 
     private static void printLines(String s) {
         System.out.println(s);
@@ -49,21 +48,21 @@ public class Task1 {
             j *= 2;
             System.out.print(k + " ");
         }
-        printLines(newLine());
+        printLines(newLine);
     }
 
     private static void printEverySecond(int n) {
         for (int i = 1; i <= n; i++) {
             System.out.print(i * 2 - 1 + " ");
         }
-        printLines(newLine());
+        printLines(newLine);
         for (int i = 1; i <= 2 * n - 1; i += 2) {
             System.out.print(i + " ");
         }
-        printLines(newLine());
+        printLines(newLine);
         //LAMBDA WAY
         IntStream.range(1, n + 1).forEach(t -> System.out.print(t * 2 - 1 + " "));
-        printLines(newLine());
+        printLines(newLine);
     }
 
     private static boolean checkIfInputIsIncorrect(int fromuser) {
