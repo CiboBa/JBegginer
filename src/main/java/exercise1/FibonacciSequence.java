@@ -10,7 +10,7 @@ public class FibonacciSequence {
         System.out.printf("Fibonacci sequence %d = %d", counter, value(counter));
     }
 
-    private static long value(long number) {
+    private static int value(int number) {
         if (number == 0)
             return 0;
         else if (number <= 2)

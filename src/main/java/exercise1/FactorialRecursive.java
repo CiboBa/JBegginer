@@ -12,7 +12,7 @@ public class FactorialRecursive {
 
     }
 
-    private static long factorial(long number) {
+    private static int factorial(int number) {
         if (number <= 1)
             return 1;
         else
