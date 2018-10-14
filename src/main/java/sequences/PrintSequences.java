@@ -1,4 +1,4 @@
-package exercises;
+package sequences;
 
 import java.util.Scanner;
 import java.util.stream.IntStream;
