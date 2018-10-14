@@ -1,28 +1,25 @@
 package chains;
 
-import javax.xml.bind.SchemaOutputResolver;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class StringOccurrances {
+public class StringOccurrences {
 
     public static void main(String[] args) {
 
         String text = getInputText();
         String key = getInputKey();
 
-        findAllOccurrances(text, key);
+        findAllOccurrences(text, key);
 
-        //int index = text.indexOf(key);
-        //System.out.println("Found at positions: [{" + index + " , " + index + key.length() + "}]");
     }
 
-    private static void findAllOccurrances(String text, String key) {
+    private static void findAllOccurrences(String text, String key) {
         Pattern pattern = Pattern.compile(key);
         Matcher matcher = pattern.matcher(text);
         while (matcher.find()) {
-            System.out.println("[{" + matcher.start() + "," + (matcher.end() - 1) + "}]");
+            System.out.print("[{" + matcher.start() + "," + (matcher.end() - 1) + "}]");
             System.out.println(matcher.group());
         }
         matcher.reset();

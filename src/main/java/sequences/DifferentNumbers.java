@@ -26,7 +26,7 @@ public class DifferentNumbers {
             checkDistinctCount(tab);
             checkMostlyFrequent(tab);
         } catch (FileNotFoundException ex) {
-            System.out.println("Exeption with reading file" + ex);
+            System.out.println("Exception with reading file" + ex);
         }
 
     }
