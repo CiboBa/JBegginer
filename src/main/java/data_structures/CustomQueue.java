@@ -10,8 +10,8 @@ public class CustomQueue<T> {
         elements.addLast(element);
     }
 
-    private T pop() {
-        return elements.removeFirst();
+    private void pop() {
+        elements.removeFirst();
     }
 
     private T front() {

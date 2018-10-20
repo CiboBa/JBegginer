@@ -11,8 +11,8 @@ public class CustomPriorityQueue<T> {
         elements.add(element);
     }
 
-    private T pop() {
-        return elements.poll();
+    private void pop() {
+        elements.poll();
     }
 
     private T front() {
