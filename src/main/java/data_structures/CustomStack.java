@@ -6,30 +6,30 @@ public class CustomStack<T> {
 
     private LinkedList<T> elements = new LinkedList<>();
 
-    public void push(T element) {
+    private void push(T element) {
         elements.addFirst(element);
     }
 
-    public T pop() {
+    private T pop() {
         return elements.removeFirst();
     }
 
-    public T peek() {
+    private T peek() {
         return elements.getFirst();
     }
 
-    public boolean isEmpty() {
+    private boolean isEmpty() {
         return elements.isEmpty();
     }
 
-    public void clear() {
+    private void clear() {
         while (!elements.isEmpty()) {
             T element = elements.pop();
             System.out.println(element);
         }
     }
 
-    public int size() {
+    private int size() {
         return elements.size();
     }
 
