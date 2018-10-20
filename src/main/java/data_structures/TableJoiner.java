@@ -4,23 +4,22 @@ import java.util.*;
 
 public class TableJoiner {
 
-    public static final Scanner SCANNER = new Scanner(System.in);
+    private static final Scanner SCANNER = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int n = getinputNumber("Enter number of arrays: ");
+        int n = getInputNumber("Enter number of arrays: ");
         int[][] tables = new int[n][];
 
         for (int i = 0; i < n; i++) {
-            int size = getinputNumber("Enter dimension: ");
+            int size = getInputNumber("Enter dimension: ");
             tables[i] = new int[size];
             fill(tables[i]);
         }
         for (int[] table : tables) {
             System.out.println(Arrays.toString(table));
         }
-        System.out.println(Arrays.toString(tables));
         int[] distindtTable = join(tables);
-        System.out.println("Restul: " + Arrays.toString(distindtTable));
+        System.out.println("Result: " + Arrays.toString(distindtTable));
     }
 
     private static void fill(int[] table) {
@@ -46,7 +45,7 @@ public class TableJoiner {
         return result;
     }
 
-    private static int getinputNumber(String message) {
+    private static int getInputNumber(String message) {
         System.out.println(message);
         return SCANNER.nextInt();
     }
