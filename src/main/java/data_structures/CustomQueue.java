@@ -39,7 +39,7 @@ public class CustomQueue<T> {
         queue.push(1);
         queue.push(2);
         queue.push(3);
-        queue.push(1);
+        queue.push(4);
         queue.pop();
         System.out.println("Last element is: " + queue.front());
         System.out.println("Queue size is: " + queue.size());

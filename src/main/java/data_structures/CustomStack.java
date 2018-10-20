@@ -38,6 +38,8 @@ public class CustomStack<T> {
         stack.push(1);
         stack.push(3);
         stack.push(4);
+        stack.push(1);
+        stack.pop();
         System.out.println("Last element is: " + stack.peek());
         System.out.println("Stack size is: " + stack.size());
         System.out.println("Is stack empty: " + stack.isEmpty());
