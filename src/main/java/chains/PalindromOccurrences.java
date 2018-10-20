@@ -19,12 +19,25 @@ public class PalindromOccurrences {
                 System.out.println(text.substring(i - j, i + j + 1));
             }
         }
-    }
+        for (int i = 1; i < text.length(); i++) {
+            char first = text.charAt(i - 1);
+            char second = text.charAt(i);
+            if (first != second) continue;
+            System.out.println(first + "" + second);
+            for (int j = i, k = i - 1; j >= 0 && k < text.length(); j++, k--) {
 
+                if (text.charAt(j) != text.charAt(k)) {
+                    break;
+                }
+                System.out.println(text.substring(j, k + 1));
+            }
+        }
+    }
 
     private static String getInputText(String message) {
         Scanner scanner = new Scanner(System.in);
         System.out.println(message);
         return scanner.nextLine();
     }
+
 }
