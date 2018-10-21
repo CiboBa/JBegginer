@@ -1,11 +1,19 @@
 package data_structures;
 
+import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Random;
 
 public class CustomPriorityQueue<T> {
     private Queue<T> elements = new PriorityQueue<>();
+
+    //private CustomPriorityQueue(){
+
+    //}
+    private CustomPriorityQueue(Comparator comparator) {
+        elements = new PriorityQueue<T>(comparator);
+    }
 
     private void push(T element) {
         elements.add(element);
@@ -35,7 +43,7 @@ public class CustomPriorityQueue<T> {
     }
 
     public static void main(String[] args) {
-        CustomPriorityQueue<Integer> priority = new CustomPriorityQueue<>();
+        CustomPriorityQueue<Integer> priority = new CustomPriorityQueue<>(getNumberComparator());
 
         Random random = new Random();
         priority.push(random.nextInt(10));
@@ -55,7 +63,7 @@ public class CustomPriorityQueue<T> {
         priority.clear();
         System.out.println("---------------");
 
-        CustomPriorityQueue<String> priority2 = new CustomPriorityQueue<>();
+        CustomPriorityQueue<String> priority2 = new CustomPriorityQueue<>(getNumberComparator());
         priority2.push("Ala");
         priority2.push("karlo");
         priority2.push(".micha .");
@@ -71,5 +79,30 @@ public class CustomPriorityQueue<T> {
         priority2.clear();
         System.out.println("Is queue empty: " + priority2.isEmpty());
         System.out.println("---------------");
+
+        String s1 = "";
+        String s2 = "";
+
+        System.out.println(s1.compareTo(s2));
+    }
+
+    private static Comparator<Integer> getNumberComparator() {
+        return new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                if (o1 % 2 == o2 % 2) {
+                    return o1 < o2 ? -1 : 1;
+                }
+                if (o1 % 2 == 0) {
+                    return -1;
+                }
+
+                if (o2 % 2 == 0) {
+                    return 1;
+                }
+                return 0;
+            }
+
+        };
     }
 }
