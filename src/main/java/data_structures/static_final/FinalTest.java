@@ -10,7 +10,7 @@ public class FinalTest {
     private String firstName;
     private final String lastName;
 
-    public FinalTest(String lastName) {
+    private FinalTest(String lastName) {
         this.lastName = lastName;
     }
 
