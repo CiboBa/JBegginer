@@ -23,6 +23,23 @@ public class CustomLinkedList<T> {
         size++;
     }
 
+    private void addAt(CustomLinkedList<T> newElement, int index) {
+        CustomLinkedList last = this;
+        int listIndex = 0;
+        while (last.next != null) {
+            if (listIndex == index + 1) {
+                break;
+            }
+            last = last.next;
+            listIndex++;
+        }
+        newElement.prev = last;
+        newElement.next = last.next;
+        last.next = newElement;
+        last.next.prev = newElement;
+        size++;
+    }
+
     private CustomLinkedList<T> remove(CustomLinkedList<T> element) {
         size--;
         if (this.value == element.value) {
@@ -40,6 +57,19 @@ public class CustomLinkedList<T> {
             toRemove = toRemove.next;
         }
         return this;
+    }
+
+    private CustomLinkedList<T> get(int index) {
+        CustomLinkedList temp = this;
+        int listIndex = 0;
+        while (temp != null) {
+            if (listIndex == index) {
+                return temp;
+            }
+            temp = temp.next;
+            listIndex++;
+        }
+        return null;
     }
 
     private int size() {
@@ -64,8 +94,10 @@ public class CustomLinkedList<T> {
         head.add(new CustomLinkedList<>(2));
         head.add(new CustomLinkedList<>(3));
         head.add(new CustomLinkedList<>(4));
+        head.addAt(new CustomLinkedList<>(5),2);
 
-        head = head.remove(new CustomLinkedList<>(2));
+
+        //head = head.remove(new CustomLinkedList<>(2));
         head.print();
         System.out.println(head.isEmpty());
         System.out.println(head.size());
