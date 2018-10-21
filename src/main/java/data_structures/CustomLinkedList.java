@@ -23,7 +23,7 @@ public class CustomLinkedList<T> {
         size++;
     }
 
-    private void addAt(CustomLinkedList<T> newElement, int index) {
+    private void add(CustomLinkedList<T> newElement, int index) {
         CustomLinkedList last = this;
         int listIndex = 0;
         while (last.next != null) {
@@ -94,7 +94,7 @@ public class CustomLinkedList<T> {
         head.add(new CustomLinkedList<>(2));
         head.add(new CustomLinkedList<>(3));
         head.add(new CustomLinkedList<>(4));
-        head.addAt(new CustomLinkedList<>(5),2);
+        head.add(new CustomLinkedList<>(5),2);
 
 
         //head = head.remove(new CustomLinkedList<>(2));
