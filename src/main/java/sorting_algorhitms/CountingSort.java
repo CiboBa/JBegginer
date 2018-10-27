@@ -13,8 +13,6 @@ public class CountingSort {
 
         sortArray(numbers);
         printArray(numbers);
-
-
     }
 
     private static void printArray(int[] numbers) {
@@ -26,15 +24,15 @@ public class CountingSort {
         for (int element : numbers) {
             if (element > max) max = element;
         }
-        int[] cardinalities = new int[max + 1];
-        Arrays.fill(cardinalities, 0);
+        int[] cardinality = new int[max + 1];
+        Arrays.fill(cardinality, 0);
         for (int i = 0; i < numbers.length; i++) {
-            cardinalities[numbers[i]]++;
+            cardinality[numbers[i]]++;
         }
 
         int counter = 0;
-        for (int i = 0; i < cardinalities.length; i++) {
-            for (int j = 0; j < cardinalities[i]; j++) {
+        for (int i = 0; i < cardinality.length; i++) {
+            for (int j = 0; j < cardinality[i]; j++) {
                 numbers[counter] = i;
                 counter++;
             }
