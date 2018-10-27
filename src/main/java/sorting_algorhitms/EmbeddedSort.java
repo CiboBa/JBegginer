@@ -2,7 +2,7 @@ package sorting_algorhitms;
 
 import java.util.*;
 
-public class EmbededSort {
+public class EmbeddedSort {
 
     public static void main(String[] args) {
 
