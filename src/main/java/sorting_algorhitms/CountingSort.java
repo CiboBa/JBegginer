@@ -34,8 +34,8 @@ public class CountingSort {
 
         int counter = 0;
         for (int i = 0; i < cardinalities.length; i++) {
-            for (int j=0; j<cardinalities[i]; j++){
-                numbers[counter]=i;
+            for (int j = 0; j < cardinalities[i]; j++) {
+                numbers[counter] = i;
                 counter++;
             }
         }
